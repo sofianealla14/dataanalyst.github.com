@@ -1,58 +1,224 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
-	<head>
-		<meta charset="utf-8">
-		<title> CAPITAL REGIONAL : Lyon_0 </title>
-		<meta name="author" content="22006072">
-		<link rel="stylesheet" type="text/css" href="../styles/screen.css">
-	</head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sofiane Alla</title>
+    <style>
+        :root {
+            --light-blue: #e3f2fd;
+            --mid-blue: #90caf9;
+            --dark-blue: #1565c0;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
 
-	<body>
-		<header>
-			<div class="haut"><img class="imgheader1" src="../images/Lyon_HDV.jpg" alt="photo de l'Hôtel de ville de Lyon"></div>
-			<div class="haut"><h1 id="titre"> Une capitale régionale<br>LYON</h1></div>
-			<div class="haut"><img class="imgheader2" src="../images/Lyon_CroixRousse.jpg" alt="photo d'un immeuble coloré de la Croix Rousse à Lyon"></div>
-		</header>
-		
-		<nav>
-			<ul id="menu0">
-				<li class="menu 1"><a class="textemenu" href="../annexes/1.html">Histoire</a></li>
-				<li class="menu 2"><a class="textemenu" href="../annexes/2.html">Géographie et mobilité</a></li>
-				<li class="menu 3"><a class="textemenu" href="../annexes/3.html">Politico-économie</a></li>
-				<li class="menu 4"><a class="textemenu" href="../annexes/4.html">Les incontournables</a></li>
-				<li class="menu 5"><a class="textemenu" href="../annexes/5.html">Sources</a></li>
-			</ul>
-		</nav>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
 
-		<aside id="contenu0">
-			<h2> SALLUUUTTT Choix de la ville</h2>
-				<p> Ayant passé 2 années d'internat dans un lycée sur Lyon à la Croix Rousse, j'ai décidé de la choisir pour mon devoir de Techno Web d'autant que j'ai vraiment aprécié cette expérience et l'ambiance générale de la ville que je considère un peu comme ma deuxième ville.
-				<br>
-				En fait, je trouve que sur Lyon tout est accessible sans pour autant avoir les inconvénients vraiment génant de la vie parisienne par exemple que sont la densité de la population trop forte et les loyers élevés.</p>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-			<h2>Présentation globale</h2>
-				<p>La capitale de la région Rhône-Alpes, préfecture pour être corect, est surtout une métropole européenne et la 3ème ville Française en terme de population avec <strong>plus de 500 000 habitants</strong>.
-				C'est une ville très touristique et <strong>influente en Europe</strong> et qui a pour <strong>ambition de rayonner sur la scène internationale</strong> ou du moins de jouer un rôle de plus en plus important dans un système mondialisé et en mutation permanente.
-				<br>
-				Entre les marchés, les animations, les commerces et plus généralement, la recrudescence des activités quotidienne, Lyon est une <strong>ville très dynamique, pleine de vie et très agréable</strong>. Je trouve en effet qu'il est très attrayant de se promener tout simplement dans Lyon sans réel but précis d'autant que généralement le temps y ait très clément mais peut parfois se montrer rude, surtout l'hiver par exemple puisque cette ville se situe non-loin de la chaîne montagneuse des Alpes.
-				<br>
-				Avis aux toursites : prévoyer tongs et bouteilles d'eau l'été et au contraire doudounes et gants l'hiver. </p>
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
 
-			<h2>Petite publicité</h2>
-				<p>Accessoirement j'en profite pour me faire une petite auto-promotion vers mon Instagram et avec lequel j'espère prochainement créer mon site ( en cours production ), celui-ci est en lien avec la discipline du Futsal dont j'ai pu faire la découverte au pôle France Futsal qui a été ouvert dernièrement en septembre 2018.
-				<br>
-				On peut dire que c'est une forme de hors-sujet, cependant j'ai plusieurs arguments contre :</p>
-				<ol>
-					<li class="justification">le futsal et donc ce compte Instagram sont fortement lié à mon vécu sur Lyon</li>
-					<li class="justification">cela me permet de rajouter du contenu sur ce site et de montrer mes "compétences" en html </li>
-					<li class="justification">c'est un peu quelque part mon site donc si le futsal ne vous intéresse, ni ne vous attire pas ou si vous ne souhaitez tout simplement pas visiter cette page je vous invite à ne pas clique sur cette image et à passer votre chemin</li>
-				</ol>
-				<br>
-				<a href="https://www.instagram.com/this.is.futsal/"> <img id="auto_promotion" src="../images/logo_instagram.png" alt="page instagram"></a> 
-		</aside>
+        /* Style des sections déroulantes */
+        .accordion {
+            background-color: white;
+            border: 1px solid var(--mid-blue);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-		<footer>
-			<p class="bas"> Copyright &copy; 2020 - All right reserved </p>
-		</footer>	
-	</body>	
+        .accordion-header {
+            background-color: var(--light-blue);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+        }
+
+        .accordion-header:hover {
+            background-color: var(--mid-blue);
+        }
+
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
+        }
+
+        .accordion.active .accordion-content {
+            max-height: 2000px; /* Grande valeur pour permettre l'expansion */
+            padding: 20px;
+        }
+
+        /* Section Présentation */
+        .profile-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--mid-blue);
+        }
+
+        /* Section Projets */
+        .project-card {
+            border-left: 4px solid var(--mid-blue);
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .skills-tag {
+            background: var(--light-blue);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <!-- PARTIE 1 : Présentation -->
+    <div class="accordion">
+        <div class="accordion-header">01. Présentation <span>+</span></div>
+        <div class="accordion-content">
+            <div class="profile-flex">
+                <img src="votre-photo.jpg" alt="Ma Photo" class="profile-img">
+                <div>
+                    <h3>Bonjour, je suis Sofiane Alla</h3>
+                    <p>Étudiant passionné par les mathématiques, l'informatique et la finance. Je développe des solutions techniques alliant rigueur logique et technologie.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTIE 2 : Carte Mentale -->
+    <div class="accordion">
+        <div class="accordion-header">02. Carte Mentale <span>+</span></div>
+        <div class="accordion-content">
+            <p>Visualisez l'organisation de mes compétences et de mes projets via ce document :</p>
+            <a href="ma-carte-mentale.pdf" class="btn" target="_blank">Consulter la Carte Mentale (PDF)</a>
+        </div>
+    </div>
+
+    <!-- PARTIE 3 : Lien Global GitHub -->
+    <div class="accordion">
+        <div class="accordion-header">03. GitHub Global <span>+</span></div>
+        <div class="accordion-content">
+            <p>Retrouvez l'intégralité de mon code et mes 11 dépôts publics ici :</p>
+            <a href="https://github.com/sofianealla14?tab=repositories" class="btn" target="_blank">Voir mes dépôts GitHub</a>
+        </div>
+    </div>
+
+    <!-- PARTIE 4 : Détail des Projets -->
+    <div class="accordion">
+        <div class="accordion-header">04. Détails des Projets <span>+</span></div>
+        <div class="accordion-content">
+            
+            <!-- Exemple de Projet 1 (à dupliquer pour les 11) -->
+            <div class="project-card">
+                <h3>Nom du Projet 1</h3>
+                <p><strong>Objectif :</strong> Résoudre un problème d'optimisation via Python.</p>
+                <p><strong>Résumé :</strong> Description courte du projet, contexte et résultats obtenus.</p>
+                <div>
+                    <span class="skills-tag">Mathématiques</span>
+                    <span class="skills-tag">Python</span>
+                    <span class="skills-tag">Algorithmique</span>
+                </div>
+                <a href="https://github.com/sofianealla14/votre-projet-1" class="btn">Lien vers le repo</a>
+            </div>
+
+            <!-- Exemple de Projet 2 -->
+            <div class="project-card">
+                <h3>Nom du Projet 2</h3>
+                <p><strong>Objectif :</strong> Analyse de données financières.</p>
+                <p><strong>Résumé :</strong> Traitement de datasets avec visualisation graphique.</p>
+                <div>
+                    <span class="skills-tag">Finance</span>
+                    <span class="skills-tag">R / Pandas</span>
+                </div>
+                <a href="https://github.com/sofianealla14/votre-projet-2" class="btn">Lien vers le repo</a>
+            </div>
+
+            <p><em>(Ajoutez les autres projets suivant la même structure...)</em></p>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Sofiane Alla - Fait avec simplicité.
+    </footer>
+</div>
+
+<script>
+    // Script pour gérer l'ouverture des sections
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(acc => {
+        acc.querySelector('.accordion-header').addEventListener('click', () => {
+            acc.classList.toggle('active');
+            
+            // Changer le signe + en -
+            const span = acc.querySelector('span');
+            span.textContent = acc.classList.contains('active') ? '-' : '+';
+        });
+    });
+</script>
+
+</body>
 </html>
