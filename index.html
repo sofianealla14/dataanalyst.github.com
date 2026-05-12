@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Sofiane Alla</title>
     <style>
+		header h1 {
+			font-size: 2.2rem;
+			color: var(--dark-blue);
+			letter-spacing: -1px; /* Pour un look plus moderne */
+			margin-bottom: 5px;
+            border: 2px solid var(--mid-blue);
+		}
         :root {
             --light-blue: #e3f2fd;
             --mid-blue: #90caf9;
@@ -19,7 +26,7 @@
             color: var(--text-color);
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
         .container {
@@ -29,17 +36,17 @@
 
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 5px 5px;
         }
 
         /* Style des sections déroulantes */
         .accordion {
             background-color: white;
             border: 1px solid var(--mid-blue);
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.1s ease;
         }
 
         .accordion-header {
@@ -62,12 +69,20 @@
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.3s ease;
+            transition: max-height 0.1s ease-out, padding 0.1s ease;
         }
 
         .accordion.active .accordion-content {
-            max-height: 2000px; /* Grande valeur pour permettre l'expansion */
-            padding: 20px;
+            max-height: 10000px; /* Grande valeur pour permettre l'expansion */
+            padding: 10px 15px 10px 15px;
+        }
+
+		p {
+            margin: 0px 0px 0px 0px;
+        }
+
+		ul {
+            margin: 0px 0px 0px 0px;
         }
 
         /* Section Présentation */
@@ -83,16 +98,16 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--mid-blue);
+            border: 2px solid var(--mid-blue);
         }
 
         /* Section Projets */
         .project-card {
-            border-left: 4px solid var(--mid-blue);
+            border-left: 5px solid var(--mid-blue);
             background: #fff;
             padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
         }
 
         .btn {
@@ -103,7 +118,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 0.9rem;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .btn:hover {
@@ -120,104 +135,272 @@
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 10px;
             font-size: 0.9rem;
             color: #777;
         }
+
+		.star {
+			color: #ccc;
+			font-size: 1.2rem;
+		}
+
+		.star.filled {
+			color: #FFD700 !important;
+			text-shadow: 0 0 0px rgba(0,0,0,0.1);
+		}
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Portfolio</h1>
+        <h1>Portfolio | Sofiane ALLA</h1>
+		<img src="images/moi.png" alt="Ma photo" style="display: block; margin: auto; max-width: 25%; height: auto;" class="profile-img">
     </header>
 
-    <!-- PARTIE 1 : Présentation -->
+    <!-- PARTIE 1 : Présentation personnelle -->
     <div class="accordion">
-        <div class="accordion-header">01. Présentation <span>+</span></div>
+        <div class="accordion-header">01. Présentation personnelle<span>+</span></div>
         <div class="accordion-content">
             <div class="profile-flex">
-                <img src="votre-photo.jpg" alt="Ma Photo" class="profile-img">
                 <div>
-                    <h3>Bonjour, je suis Sofiane Alla</h3>
-                    <p>Étudiant passionné par les mathématiques, l'informatique et la finance. Je développe des solutions techniques alliant rigueur logique et technologie.</p>
-                </div>
+                    <p>En tant que futur <b>Data Analyst</b>, et ce grâce à la formation de chez <a href="https://openclassrooms.com/fr/paths/1040-data-analyst?utm_source%5B0%5D=google&utm_source%5B1%5D=google&utm_medium%5B0%5D=cpc&utm_medium%5B1%5D=cpc&utm_campaign=paidsearch_google_fr_fr_b2c_prospecting_bra_track-led_adgroup-is-149602060776&gad_source=1&gad_campaignid=20152310125&gbraid=0AAAAACyNAs8i6EhnjJRvvVOrz9gozspXW&gclid=CjwKCAjwn4vQBhBsEiwAq3hhN4UqWGBEc7h9K9jXdl5oJImDxLY96nRW3cwnMhP51nGlVU_amKCtJBoC0VYQAvD_BwE" title="Le meilleur endroit pour trouver plus d'informations sur la mission de Mozilla et la manière de contribuer" target="_blank">OpenClassrooms</a>, je tend à combiner au mieux rigueur et expertise technique pour donner du sens aux données.</p>
+                    <p><b>Rigueur et logique :</b> ma formation universitaire m'apporte les bases solides nécessaires à la modélisation statistique et à la compréhension approfondie des algorithmes.</p>
+					<p><b>Expertise data :</b> à travers mes projets (Python, SQL, Power), j'apprends à extraire, nettoyer et visualiser la donnée pour en faire un véritable outil d'aide à la décision.</p>
+					<p><b>Esprit stratégique :</b> passionné par les échecs et le futsal, j'aborde chaque défi avec la tactique du joueur et l'esprit d'équipe du sportif.</p>
+					<p>Curieux et technophile, je mets ma <b>polyvalence</b> au service de projets concrets alliant informatique et mathématiques.</p>
+				</div>
             </div>
         </div>
     </div>
 
-    <!-- PARTIE 2 : Carte Mentale -->
+	<!-- PARTIE 2 : Compétences globales -->
     <div class="accordion">
-        <div class="accordion-header">02. Carte Mentale <span>+</span></div>
+        <div class="accordion-header">02. Compétences globales <span>+</span></div>
         <div class="accordion-content">
-            <p>Visualisez l'organisation de mes compétences et de mes projets via ce document :</p>
-            <a href="ma-carte-mentale.pdf" class="btn" target="_blank">Consulter la Carte Mentale (PDF)</a>
+			<p>Vous pouvez retrouver mon auto-évaluation sur chaque langage de programmation à travers ce classement de maîtrise sur 5 étoiles :</p>
+			<ul>
+				<li>
+					Excel : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+				</li>
+				<li>
+					Python : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+				</li>
+				<li>
+					Power BI : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+				</li>
+				<li>
+					C : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+				</li>
+				<li>
+					SQL (DBeaver/SQLite) : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
+				</li>
+				<li>
+					Haskell : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
+				</li>
+				<li>
+					Java : 
+					<span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+				</li>
+			</ul>
         </div>
     </div>
 
-    <!-- PARTIE 3 : Lien Global GitHub -->
+    <!-- PARTIE 3 : Carte mentale -->
     <div class="accordion">
-        <div class="accordion-header">03. GitHub Global <span>+</span></div>
+        <div class="accordion-header">03. Carte mentale <span>+</span></div>
         <div class="accordion-content">
-            <p>Retrouvez l'intégralité de mon code et mes 11 dépôts publics ici :</p>
+            <p>Vous pouvez visualisez l'organisation de mes compétences et de mes projets via ce document :</p>
+            <a href="annexes/carte-mentale.pdf" class="btn" target="_blank">Consulter la Carte mentale (PDF)</a>
+        </div>
+    </div>
+
+    <!-- PARTIE 4 : Lien GitHub -->
+    <div class="accordion">
+        <div class="accordion-header">04. Dépôts projets sur GitHub<span>+</span></div>
+        <div class="accordion-content">
+            <p>Vous pouvez retrouvez l'intégralité de mes projets et mes 11 dépôts publics ici :</p>
             <a href="https://github.com/sofianealla14?tab=repositories" class="btn" target="_blank">Voir mes dépôts GitHub</a>
         </div>
     </div>
 
-    <!-- PARTIE 4 : Détail des Projets -->
+    <!-- PARTIE 5 : Détail des projets -->
     <div class="accordion">
-        <div class="accordion-header">04. Détails des Projets <span>+</span></div>
+        <div class="accordion-header">05. Détails des projets <span>+</span></div>
         <div class="accordion-content">
-            
+
             <!-- Exemple de Projet 1 (à dupliquer pour les 11) -->
             <div class="project-card">
-                <h3>Nom du Projet 1</h3>
-                <p><strong>Objectif :</strong> Résoudre un problème d'optimisation via Python.</p>
-                <p><strong>Résumé :</strong> Description courte du projet, contexte et résultats obtenus.</p>
+                <h3>Projet 1 : démarrez votre formation de Business Intelligence</h3>
+                <p><strong>Objectif :</strong> se familiariser avec la formation, comprendre comment marche le site et les rendus, les compétences et les attendus de manière générale</p>
+                <p><strong>Résumé :</strong> découverte de la formation, des compétences et du "métier"</p>
                 <div>
-                    <span class="skills-tag">Mathématiques</span>
-                    <span class="skills-tag">Python</span>
-                    <span class="skills-tag">Algorithmique</span>
+                    <span class="skills-tag">Découverte</span>
+                    <span class="skills-tag">Présentation</span>
                 </div>
-                <a href="https://github.com/sofianealla14/votre-projet-1" class="btn">Lien vers le repo</a>
+                <a href="https://github.com/sofianealla14/projet-1_demarrez-votre-formation-de-Business-Intelligence" class="btn" target="_blank">Lien vers le repo</a>
             </div>
 
             <!-- Exemple de Projet 2 -->
             <div class="project-card">
-                <h3>Nom du Projet 2</h3>
-                <p><strong>Objectif :</strong> Analyse de données financières.</p>
-                <p><strong>Résumé :</strong> Traitement de datasets avec visualisation graphique.</p>
+                <h3>Projet 2 : visualisez des données avec Excel</h3>
+                <p><strong>Objectif :</strong> un profil type des clients quittant la banque, les habitudes d’utilisations des clients et des profils de clients actuels qui pourraient partir</p>
+                <p><strong>Résumé :</strong> analyse de la clientèle de PRIMERO BANK</p>
                 <div>
-                    <span class="skills-tag">Finance</span>
-                    <span class="skills-tag">R / Pandas</span>
+                    <span class="skills-tag">Excel</span>
+					<span class="skills-tag">Visualisation</span>
+                    <span class="skills-tag">Bases de données</span>
                 </div>
-                <a href="https://github.com/sofianealla14/votre-projet-2" class="btn">Lien vers le repo</a>
+                <a href="https://github.com/sofianealla14/projet-2_visualisez-des-donnees-avec-Excel" class="btn" target="_blank">Lien vers le repo</a>
             </div>
 
-            <p><em>(Ajoutez les autres projets suivant la même structure...)</em></p>
-
+			<!-- Exemple de Projet 3 -->
+            <div class="project-card">
+                <h3>Projet 3 : requetez une base de donnees avec SQL</h3>
+                <p><strong>Objectif :</strong> exploration des données, création et modification du schéma relationnel, insertion des données et exécution des requêtes et analyse des résultats</p>
+                <p><strong>Résumé :</strong> analyse d'un jeu de donnée grâce avec SQL (DBeaver, SQlite, etc)</p>
+                <div>
+                    <span class="skills-tag">SQL</span>
+					<span class="skills-tag">Relations</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-3_requetez-une-base-de-donnees-avec-SQL" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 4 -->
+            <div class="project-card">
+                <h3>Projet 4 : collectez des données en respectant les normes RGPD</h3>
+                <p><strong>Objectif :</strong> introduction et processus de collecte des données, sélection des variables (requête SQL), préparation des données et nettoyage, anonymisation des données et contrôle/validation et les choix faits</p>
+                <p><strong>Résumé :</strong> principes et les applications du RGPD (règlement général sur la protection des données)</p>
+                <div>
+                    <span class="skills-tag">Juridique</span>
+					<span class="skills-tag">Anonymisation/pseudonymisation</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-4_collectez-des-donnees-en-respectant-les-normes-RGPD" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 5 -->
+            <div class="project-card">
+                <h3>Projet 5 : manipulez une base de données avec SQL pour suivre la satisfaction client</h3>
+                <p><strong>Objectif :</strong> identifier les points forts et axes d’amélioration, mesurer la satisfaction par le Net Promoter Score (NPS) et d’autres indicateurs et mettre en place un suivi par typologie de produit, magasin, source de retour et période</p>
+                <p><strong>Résumé :</strong> suivre la satisfaction client chez BestMarket dans plusieurs magasins</p>
+                <div>
+                    <span class="skills-tag">SQL</span>
+					<span class="skills-tag">Satisfaction client</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-5_manipulez-une-base-de-donnees-avec-SQL-pour-suivre-la-satisfaction-client" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 6 -->
+            <div class="project-card">
+                <h3>Projet 6 : optimisez la gestion et nettoyez les données du stock d'une boutique</h3>
+                <p><strong>Objectif :</strong> analyse de la gestion de Bottleneck (une boutique de vin)</p>
+                <p><strong>Résumé :</strong> analyses exploratoires des données, fusion ou consolidations des données, analyses univariées du prix et faire des analyses complémentaires (CA, quantités, stocks, taux de marge et correlations)</p>
+                <div>
+                    <span class="skills-tag">Python</span>
+					<span class="skills-tag">Visualisation</span>
+					<span class="skills-tag">Indicateurs clés</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-6_optimisez-la-gestion-nettoyez-les-donnees-du-stock-d-une-boutique" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 7 -->
+            <div class="project-card">
+                <h3>Projet 7 : créez un tableau de bord dynamique avec PowerBI pour visualiser l'avancement de projets</h3>
+                <p><strong>Objectif :</strong> product Strategy Canvas, préparation/nettoyage des données, le modèle de données et tableau de bord de reporting</p>
+                <p><strong>Résumé :</strong> créer dashboard pour Sanitoral (une entreprise international gérant des projets)</p>
+                <div>
+                    <span class="skills-tag">Power BI</span>
+					<span class="skills-tag">Processus classique (nettoyage/analyse/présentation)</span>
+					<span class="skills-tag">Tableau de bord</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-7_creez-un-tableau-de-bord-dynamique-avec-PowerBI-pour-visualiser-l-avancement-de-projets" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 8 -->
+            <div class="project-card">
+                <h3>Projet 8 : realisez une analyse de données en Python</h3>
+                <p><strong>Objectif :</strong> analyse du marché immobilier, "prédire" avec un modèle et opportunités stratégique et préconisation</p>
+                <p><strong>Résumé :</strong> Analyse d'un jeu de donnée d'une entreprise immobilière (les Plus Beaux Logis)) à Paris en Python</p>
+                <div>
+                    <span class="skills-tag">Python</span>
+					<span class="skills-tag">Analyse de marché</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-8_realisez-une-analyse-de-donnees-en-Python" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 9 -->
+            <div class="project-card">
+                <h3>Projet 9 : ameliorez les performances de l'entreprise</h3>
+                <p><strong>Objectif :</strong> méthodes d’importation, nettoyage et transformation des données, modélisation des données, Data Visualisation et déploiement des préconisations stratégiques (dashboard) et mise à jour et automatisation (du dashboard)</p>
+                <p><strong>Résumé :</strong> analyse pour émettre des préconisations à Bottleneck (entreprise de vin)</p>
+                <div>
+                    <span class="skills-tag">Power BI</span>
+					<span class="skills-tag">Processus classique (nettoyage/analyse/présentation)</span>
+					<span class="skills-tag">Tableau de bord</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-9_ameliorez-les-performances-de-l-entreprise" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 10 -->
+            <div class="project-card">
+                <h3>Projet 10 : analysez une demande business et identifiez les segments du marché les plus pertinents pour votre client</h3>
+                <p><strong>Objectif :</strong> analyse SWOT et PESTEL, analyse des tendances du marché, analyse du segment et les opportunités stratégiques et les préconisations business</p>
+                <p><strong>Résumé :</strong> analyses et préconisations pour Data ESN (jeux vidéos : ventes, avis clients, etc)</p>
+                <div>
+                    <span class="skills-tag">Power BI</span>
+					<span class="skills-tag">Processus classique (nettoyage/analyse/présentation)</span>
+					<span class="skills-tag">Diagnostic (SWOT/PESTEL/tendances)</span>
+					<span class="skills-tag">Tableau de bord</span>
+                    <span class="skills-tag">Bases de données</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-10_analysez-demande-business-et-identifiez-segments-du-marche-pertinents-pour-votre-client" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
+			<!-- Exemple de Projet 11 -->
+            <div class="project-card">
+                <h3>Projet 11 : créez votre portfolio de professionnel de la data</h3>
+                <p><strong>Objectif :</strong> élaborer un pitch professionnel percutant et synthétiser ses compétences et expériences acquises tout au long de votre formation</p>
+                <p><strong>Résumé :</strong> création d'un portfolio professionnel de Data Analyst pour afin de passer un entretien d'emnauche chez Aéroworld (leader mondial dans l'industrie aéronautique)</p>
+                <div>
+                    <span class="skills-tag">GitHub</span>
+					<span class="skills-tag">Power BI</span>
+                    <span class="skills-tag">Carte mentale</span>
+                </div>
+                <a href="https://github.com/sofianealla14/projet-11_creez-votre-portfolio-de-professionnel-de-la-data" class="btn" target="_blank">Lien vers le repo</a>
+            </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Sofiane Alla - Fait avec simplicité.
+        &copy; 2026 Sofiane ALLA - Tous droits réservés.
     </footer>
 </div>
 
 <script>
     // Script pour gérer l'ouverture des sections
     const accordions = document.querySelectorAll('.accordion');
-
-    accordions.forEach(acc => {
-        acc.querySelector('.accordion-header').addEventListener('click', () => {
-            acc.classList.toggle('active');
-            
-            // Changer le signe + en -
-            const span = acc.querySelector('span');
-            span.textContent = acc.classList.contains('active') ? '-' : '+';
-        });
-    });
+	// Optionnel : Fermer les autres accordéons à l'ouverture d'un nouveau
+	accordions.forEach(acc => {
+		acc.querySelector('.accordion-header').addEventListener('click', () => {
+			const isActive = acc.classList.contains('active');
+			// Ferme tous les accordéons
+			accordions.forEach(other => {
+				other.classList.remove('active');
+				other.querySelector('span').textContent = '+';
+			});
+			// Ouvre celui cliqué s'il n'était pas déjà ouvert
+			if (!isActive) {
+				acc.classList.add('active');
+				acc.querySelector('span').textContent = '-';
+			}
+		});
+});
 </script>
 
 </body>
