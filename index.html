@@ -89,16 +89,31 @@
         .profile-flex {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--mid-blue);
+        }
+
+        .photo {
+            display: block;
+            margin: auto;
+            height: auto;
+            border: 2px solid var(--mid-blue);
+            max-width: 20%;
+            /* background: linear-gradient(135deg, #b3bbbc, #a2adab); */
+            border-radius: 50%;
+            transition: 0.8s;   
+        }
+
+        .photo:hover {
+            transform: rotateY(180deg);
         }
 
         /* Section Projets */
@@ -156,7 +171,7 @@
 <div class="container">
     <header>
         <h1>Portfolio | Sofiane ALLA</h1>
-		<img src="images/moi.png" alt="Ma photo" style="display: block; margin: auto; max-width: 25%; height: auto;" class="profile-img">
+		<img src="images/moi.png" class="photo" alt="Ma photo" class="profile-img">
     </header>
 
     <!-- PARTIE 1 : Présentation personnelle -->
@@ -213,30 +228,46 @@
         </div>
     </div>
 
-    <!-- PARTIE 3 : Carte mentale et tableau de bord -->
+    <!-- PARTIE 3 : Carte mentale -->
     <div class="accordion">
-        <div class="accordion-header">03. Carte mentale et tableau de bord<span>+</span></div>
+        <div class="accordion-header">03. Carte mentale<span>+</span></div>
         <div class="accordion-content">
             <p>Vous pouvez visualisez l'organisation de mes compétences et de mes projets via ce document :</p>
             <a href="annexes/carte-mentale.pdf" class="btn" target="_blank">Consulter la carte mentale (en .pdf)</a>
+        </div>
+    </div>
+
+    <!-- PARTIE 4 : Tableau de bord -->
+    <div class="accordion">
+        <div class="accordion-header">04. Tableau de bord<span>+</span></div>
+        <div class="accordion-content">
             <p>Vous pouvez également visualisez mon tableau de bord via ces documents :</p>
             <a href="annexes/tableau-de-bord.pdf" class="btn" target="_blank">Consulter le tableau de bord (en .pdf)</a>
             <a href="annexes/tableau-de-bord.pbix" download="tableau-de-bord.pbix" class="btn">Consulter le tableau de bord (en .pbix)</a>
         </div>
     </div>
 
-    <!-- PARTIE 4 : Lien GitHub -->
+    <!-- PARTIE 5 : Diagramme de Gantt -->
     <div class="accordion">
-        <div class="accordion-header">04. Dépôts projets sur GitHub<span>+</span></div>
+        <div class="accordion-header">05. Diagramme de Gantt<span>+</span></div>
+        <div class="accordion-content">
+            <p>Vous pouvez aussi visualisez le diagramme de Gantt permettant de visualiser dans le temps mes diverses tâches composant mes différents projet :</p>
+            <a href="annexes/diagramme-de-gantt.xlsx" download="diagramme-de-gantt.xlsx" class="btn">Consulter le diagramme de Gantt (en .xlsx)</a>
+        </div>
+    </div>
+
+    <!-- PARTIE 6 : Lien GitHub -->
+    <div class="accordion">
+        <div class="accordion-header">06. Dépôts projets sur GitHub<span>+</span></div>
         <div class="accordion-content">
             <p>Vous pouvez retrouvez l'intégralité de mes 11 projets de formation Data Analyst, mes projets personnels ainsi que leurs dépôts respectifs ici :</p>
             <a href="https://github.com/sofianealla14?tab=repositories" class="btn" target="_blank">Voir mes dépôts GitHub</a>
         </div>
     </div>
 
-    <!-- PARTIE 5 : Détail des projets -->
+    <!-- PARTIE 7 : Détail des projets -->
     <div class="accordion">
-        <div class="accordion-header">05. Détails des projets <span>+</span></div>
+        <div class="accordion-header">07. Détails des projets <span>+</span></div>
         <div class="accordion-content">
 
             <!-- Exemple de Projet 1 (à dupliquer pour les 11) -->
